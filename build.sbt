@@ -4,4 +4,11 @@ version := "0.1"
 
 scalaVersion := "2.13.2"
 
-val akkaVersion = "2.5.13"
+lazy val akkaVersion = "2.6.5"
+
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor-typed" % akkaVersion,
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion,
+  "org.scalatest" %% "scalatest" % "3.1.0"
+)
